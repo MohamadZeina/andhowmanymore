@@ -1,0 +1,80 @@
+body {
+	background: #F6F6F6;
+	font-family: sans-serif;
+	font-weight: 100;
+	text-align: center;
+	margin: 0;
+}
+
+.container {
+	width: 75%;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 900px) {
+	.container {
+		width: 85%;
+	}
+}
+
+.align-left {
+	text-align: left;
+}
+
+.drop-shadow {
+	padding: 20px 0 20px 0;
+	background-color: #FFFFFF;
+	-webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);			
+}
+
+h1 {
+	font-weight: 100;
+	font-size: 30px;
+}
+
+h2 {
+	font-weight: 100;
+	text-align: left;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+/* */
+.big-div {
+	text-align: center;
+}
+
+/* */
+.countdownContainer {
+	margin: 0 auto;
+	padding: 10px;
+}
+
+/* */
+.number {
+	font-size: 40px;
+}
+
+/* */
+.under-number {
+	margin: 10px 0;
+}
+
+/* */
+#holds-stats {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	justify-content: center;
+
+}
+
+/* */
+.stat {
+	flex-basis: 200px;
+	margin: 10px 40px;
+}
