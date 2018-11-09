@@ -43,38 +43,30 @@ a:link {
 	text-decoration: none;
 }
 
-/* */
-.big-div {
+.centered {
 	text-align: center;
 }
 
-/* */
-.countdownContainer {
-	margin: 0 auto;
-	padding: 10px;
-}
-
-/* */
-.number {
-	font-size: 40px;
-}
-
-/* */
-.under-number {
-	margin: 10px 0;
-}
-
-/* */
+/* A full width div that contains all statistics and their descriptions. */
 #holds-stats {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 auto;
 	justify-content: center;
-
 }
 
-/* */
+/* Holds number of deaths and the caption underneath it. */
 .stat {
 	flex-basis: 200px;
 	margin: 10px 40px;
+}
+
+/* Big number, that counts the number of deaths for each category. */
+.number {
+	font-size: 40px;
+}
+
+/* The caption under the number of deaths, explaining which group it's for. */
+.under-number {
+	margin: 10px 0;
 }

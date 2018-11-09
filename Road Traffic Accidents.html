@@ -60,12 +60,6 @@
 			<br>
 			Human road traffic deaths are based on <a href="http://www.who.int/mediacentre/factsheets/fs310/en/"> WHO figures from 2015.</a> A search on BBC News and Google News found one case where a semi self-driving car was implicated in a car crash, and this was a <a href="https://www.wired.com/2017/01/probing-teslas-deadly-crash-feds-say-yay-self-driving/">very controversial case</a> where the role of autonomous technology was disputed. <a href="https://www.bloomberg.com/news/articles/2018-03-19/uber-autonomous-car-involved-in-fatal-crash-in-arizona">A more recent case</a> involved a pedestrian, who was struck by an autonomous Uber vehicle in Arizona.
 			<br>
-			<!--
-			<br>
-			 I realise this is an unscientific response to an unscientific argument. After all, it's not a fair comparison since the vast majority of vehicles on the road are being driven by people. This page is more about raising awareness of how dangerous the act of driving is, and how urgently something needs to be done about it. 
-			<br>
-			<br>
-			There's also the <a href="http://journals.sagepub.com/doi/abs/10.1111/j.1467-9280.2009.02267.x"> psychological principle of unfamiliar ideas seeming higher risk</a>, even when there is lack of evidence to back this up. -->
 		</p>
 		<h2>Support</h2>
 		<p>
@@ -114,33 +108,37 @@
 
 		<script type="text/javascript">
 
-			function countdown(){
+			// Counts the number of deaths caused by human error
+			function countHumanDeaths(){
+
+				// Sets up the first day to start counting deaths
 				var now = new Date();
 				var startDate = new Date(2016, 4, 7);
-
-				var currentTime = now.getTime();
 				var startTime = startDate.getTime();
 
+				// Counts the time that has elapsed since 
+				var currentTime = now.getTime();
 				var elapsedTime =  currentTime - startTime;
+				var elapsedSeconds = Math.floor(elapsedTime / 1000);
 
-				var s = Math.floor(elapsedTime / 1000);
+				// Calculates deaths, assuming one every 23.5 seconds
+				deaths = Math.floor(elapsedSeconds / 23.5)
 
-				s = Math.floor(s / 23.5)
-
-				const numberWithCommas = (s) => {
-  					return s.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+				// Formats the number correctly
+				const numberWithCommas = (deaths) => {
+  					return deaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 				}
 
-				s = numberWithCommas(s)
+				deaths = numberWithCommas(deaths)
 
-				document.getElementById("human-deaths").textContent = s;
-				document.getElementById("human-deaths").innerText = s;
+				// Updates the html fields
+				document.getElementById("human-deaths").textContent = deaths;
 
-
-				setTimeout(countdown, 1000);
+				// Only updates every second
+				setTimeout(countHumanDeaths, 1000);
 			}
 
-			countdown();
+			countHumanDeaths();
 		</script>
 	</body>
 </html>
